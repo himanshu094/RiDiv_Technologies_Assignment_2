@@ -244,13 +244,13 @@ export default function TaskTracker() {
 
   return (
     <div style={{display:'flex',justifyContent:'center'}}>
-      <div style={{width:'700px',margin:10}}>
+      <div style={{width:'70%',margin:10}}>
         <Grid container spacing={2} style={{alignItems:'center'}}>
 
-          <Grid item xs={4.37}>
+          <Grid item xs={3}>
             <TextField label='Enter Task No' value={id}  fullWidth onChange={(e)=>setId(e.target.value)}/>
           </Grid>
-          <Grid item xs={7.63}>
+          <Grid item xs={9}>
             <TextField label='Enter Task Name' value={taskName}  fullWidth onChange={(e)=>setTaskName(e.target.value)}/>
           </Grid>
 
