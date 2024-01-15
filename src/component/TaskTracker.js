@@ -87,7 +87,7 @@ export default function TaskTracker() {
     return(
       <Dialog open={open}>
         <DialogTitle >
-          Update ToDo
+          Update Task
         </DialogTitle>
         <DialogContent>
               <Grid item xs={12} style={{marginBottom:8}}>
@@ -191,12 +191,12 @@ export default function TaskTracker() {
       actions={[
         {
           icon: 'edit',
-          tooltip: 'Edit Table',
+          tooltip: 'Edit Task',
           onClick:  (event, rowData) => handleEdit(rowData)
         },
         {
           icon: 'delete',
-          tooltip: 'Delete Table',
+          tooltip: 'Delete Task',
           onClick: (event, rowData) => handleDelete(rowData)
         },
         
@@ -258,7 +258,7 @@ export default function TaskTracker() {
              <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer components={['DatePicker', 'DatePicker']}>        
                       <DatePicker
-                        label="Current Date"
+                        label="Date"
                         format="DD-MM-YYYY"
                         slotProps={{
                           textField: {
