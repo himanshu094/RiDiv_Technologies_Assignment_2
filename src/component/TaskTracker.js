@@ -57,7 +57,7 @@ export default function TaskTracker() {
                 [id]:{id:id,
                     taskname:taskName,
                     date:date,
-                  status:'incompleted'}
+                  status:'incomplete'}
               }
   
     localStorage.setItem('TaskData',JSON.stringify(body));
@@ -128,7 +128,7 @@ export default function TaskTracker() {
     return(<>
       <MaterialTable
       style={{ boxShadow:"0 0 15px #222"}}
-      title="Incompleted Task List"
+      title="Incomplete Task List"
       columns={[
         { title: 'Id', field: 'id' },
         { title: 'Task Name', field:'taskname'},
@@ -138,14 +138,14 @@ export default function TaskTracker() {
             <RadioGroup row value={rowData.status}>
                 <FormControlLabel value="completed" control={<Radio />} label="Completed" 
                   onChange={(e)=>handleRadio(e.target.value,rowData)}/> 
-                <FormControlLabel value="incompleted" control={<Radio />} label="Incompleted" 
+                <FormControlLabel value="incomplete" control={<Radio />} label="Incomplete" 
                   onChange={(e)=>handleRadio(e.target.value,rowData)}/> 
             </RadioGroup>
           </FormControl>
         </>}
       ]}
       data={taskArray.filter((item)=>{
-         return (item.status=='incompleted')
+         return (item.status=='incomplete')
       })}        
       actions={[
         {
@@ -179,7 +179,7 @@ export default function TaskTracker() {
             <RadioGroup row value={rowData.status}>
                 <FormControlLabel value="completed" control={<Radio />} label="Completed" 
                   onChange={(e)=>handleRadio(e.target.value,rowData)}/> 
-                <FormControlLabel value="incompleted" control={<Radio />} label="Incompleted" 
+                <FormControlLabel value="incomplete" control={<Radio />} label="Incomplete" 
                   onChange={(e)=>handleRadio(e.target.value,rowData)}/> 
             </RadioGroup>
           </FormControl>
@@ -226,7 +226,7 @@ export default function TaskTracker() {
                 [id]:{id:id,
                     taskname:taskName,
                     date:date,
-                    status:'incompleted'}
+                    status:'incomplete'}
               }
   
     console.log(body);
